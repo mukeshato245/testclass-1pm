@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>callback function</title>
+</head>
+<body>
+    <div></div>
+
+<script>
+
+    const news=[
+        {name:'Mukesh',address:'Lahan'},
+        {name:'Gyan',address:'Kathmandu'},
+        ]
+
+        // define function showNews()
+        function showNews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach(post=>{
+                    result+=`<li>${post.name}</li>`
+                })
+                document.querySelector('div').innerHTML=result
+            },3000)
+        }
+
+        // call the function showNews()
+        showNews()
+
+</script>
+
+</body>
+</html>

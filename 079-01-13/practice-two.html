@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <script>
+        const fruits = ['Apple','Banana','Mango','Cherry','Pumogrenade','Pineapple','Grapes']
+
+        fruits.map(demo)
+
+        function demo(fruits_item){
+            document.write(`<li>${fruits_item}</li>`)
+        }
+
+        document.write(`<hr>`)
+        //  another method
+        
+        fruits.map(function (memo){
+            document.write(`<li>${memo}</li>`)
+        })
+        
+        document.write(`<hr>`)
+
+        // arrow function method
+        fruits.map(f_name=>
+        document.write(`<li>${f_name}</li>`)
+        )
+    </script>
+</body>
+</html>

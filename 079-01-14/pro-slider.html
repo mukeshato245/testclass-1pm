@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pro slider-image</title>
+</head>
+<style>
+    img{
+        height: 100%;
+        width: 100%;
+
+    }
+    .container{
+        height: 500px;
+        width: 900px;
+        margin: auto;
+        position: relative;
+    }
+    .left,.right{
+        position: absolute;
+        top: 43%;
+        background-color: rgba(0,0, 0, 0);
+        border: none;
+        color: blue;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    .left{
+        left: 5px;
+    }
+    .right{
+        right: 5px;
+    }
+</style>
+<body >
+    <div class="container" onmouseover="stops()" onmouseout="starts()">
+        <img src="images/1.jpg" alt="images" id="image">
+        <button class="left" onclick="prev()"><</button>
+        <button class="right" onclick="next()">></button>
+    </div>
+
+    <script>
+
+        const img_array=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']
+        const array_length=img_array.length
+        let i=0
+
+        let set = setInterval(sliderFunction,3000)
+        
+        function sliderFunction(){
+
+        
+            i++
+            i=i%array_length
+
+            document.getElementById('image').src=`images/${img_array[i]}`
+        }
+        
+        function next(){
+            i++
+            i=i%array_length
+            
+            document.getElementById('image').src=`images/${img_array[i]}`
+        }
+        
+        function prev(){
+            i--
+            if(i<0){
+                i=array_length-1
+                
+            }
+            document.getElementById('image').src=`images/${img_array[i]}`
+            
+        }
+
+        function stops(){
+            clearInterval(set)
+        }
+        
+        function starts(){
+            let set = setInterval(sliderFunction,3000)
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practicing callback function</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const news=[
+            {title:'first',content:'this is a content........'},
+            {title:'second',content:'this s a second content...'},
+        ]
+        function shownews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach(post=>{
+                    result+=`<li>${post.title}</li>`
+                })
+                document.querySelector('div').innerHTML=result
+            },3000)
+        }
+        shownews()
+    </script>
+</body>
+</html>

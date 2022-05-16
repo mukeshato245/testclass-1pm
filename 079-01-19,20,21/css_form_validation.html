@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation self practice</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 2px 2px 20px black;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            color: green;
+        }
+        .name{
+            height: 30px;
+            width: 400px;
+            margin-bottom: 5px;
+        }
+        .label{
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 20px;
+            color: blue;
+        }
+        .button{
+            height: 40px;
+            width: 100px;
+            border: solid 2px green;
+            border-radius: 15px;
+            color: green;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: black;
+            color: green;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <form>
+
+            <h1>Registration Form</h1>
+            <label for="fname" class="label">First Name</label><br>
+            <input type="text" id="fname" onkeyup="fnameFunction()" class="name" placeholder="first name"><br>
+            <span id="fnamemsg"></span><br>
+            <label for="lname" class="label">Last Name</label><br>
+            <input type="text" id="lname" onkeyup="lnameFunction()" class="name" placeholder="last name"><br>
+            <span id="lnamemsg"></span><br>
+            <label for="gmail" class="label">Gmail</label><br>
+            <input type="gmail" id="gmail" onkeyup="gmailFunction()" class="name" placeholder="gmail"><br>
+            <span id="gmailmsg"></span><br>
+            <label for="password" class="label">Password</label><br>
+            <input type="password" id="password" onkeyup="passwordFunction()" class="name" placeholder="password"><br>
+            <span id="passwordmsg"></span><br>
+            <button type="submit" class="button">Submit</button><br>
+
+        </form>
+
+    </div>
+
+
+    <script src="action.js"></script>
+</body>
+
+</html>

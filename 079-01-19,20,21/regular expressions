@@ -1,0 +1,16 @@
+Regular Expressions
+/.../ -> regular expression must  write in the dotted line
+^ -> it checks from the begining
+$ -> it checks from the end
+[a-z] -> matches only lower alphabets
+[A-Z] -> matches olny uppercase alphabets
+[a-zA-Z] -> matches both the uppercase and lowercase alphabets
+[0-9] -> it matches only numeric value
+
+for special character use  \
+example: \@,\-,\_,\.  etc
+
+* -> matches one or more preceeding character
+. -> matches single character
+?=  -> this symbol denotes that  position of any string or character deesnot need to be at any specefic position whether
+        it can come in the begening or last.
